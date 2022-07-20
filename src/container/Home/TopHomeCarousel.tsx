@@ -3,8 +3,21 @@ import styled from "@emotion/styled";
 
 import { SafeAny } from "../../core/models/common";
 import Carousel from "antd/lib/carousel";
+import ModalComponent from "@components/shared/Modal";
+import { Button, Col, Row } from "antd";
 
 const TopHomeCarousel = ({}) => {
+  const [isShow, setIsShow] = useState(false);
+
+  const onShowModalHandler = () => {
+    console.log(1);
+    setIsShow(true);
+  };
+
+  const onCloseModalHandler = () => {
+    setIsShow(false);
+  }
+
   return (
     <TopHomeCarouselWrap>
       <CarouselContent>
@@ -23,7 +36,11 @@ const TopHomeCarousel = ({}) => {
                   Let's collect your first cards &amp; live the game with
                   passion
                 </h2>
-                <CarouselContentItemBtn>
+                <CarouselContentItemBtn
+                  onClick={() => {
+                    onShowModalHandler();
+                  }}
+                >
                   <img src="/images/common/explore-btn.svg" />
                 </CarouselContentItemBtn>
 
@@ -50,18 +67,25 @@ const TopHomeCarousel = ({}) => {
           <CarouselContentItem>
             <CarouselContentItemWrap>
               <CarouselContentItemImg>
-                <img src="/images/common/main-ronaldo.png" />
-                <ImgWc>
-                  <img src="/images/common/world-cup.png" />
-                </ImgWc>
+                <img src="/images/common/footballteam.png" />
               </CarouselContentItemImg>
               <CarouselContentItemDes>
                 <h2>
-                  Let's collect your first cards &amp; live the game with
-                  passion
+                Buy 7VR to earn more 7VR by building your Squad with NFT Cards and win the 7Verse Fantasy League.  
                 </h2>
-                <CarouselContentItemBtn>
-                  <img src="/images/common/explore-btn.svg" />
+                <CarouselContentItemBtn
+                  onClick={() => {
+                    onShowModalHandler();
+                  }}
+                >
+                  <Row>
+                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+                      <Button type="primary" shape="round"> Audited by Cyberscope.io</Button> 
+                    </Col>              
+                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+                      <Button type="primary" shape="round"> Purchase 7VR Token Presale Now!</Button> 
+                    </Col>
+                  </Row>
                 </CarouselContentItemBtn>
 
                 <CarouselContentItemData>
@@ -85,11 +109,13 @@ const TopHomeCarousel = ({}) => {
           </CarouselContentItem>
         </Carousel>
       </CarouselContent>
+      {isShow &&  <ModalComponent title="" modalShow={isShow} onCloseModalHandler={onCloseModalHandler}/> }
+     
     </TopHomeCarouselWrap>
   );
 };
 
-export default React.memo(TopHomeCarousel);
+export default TopHomeCarousel;
 
 const TopHomeCarouselWrap = styled.div`
   .slick-dots-right {
@@ -117,7 +143,7 @@ const TopHomeCarouselWrap = styled.div`
     }
   }
 
-  @media ${props => props.theme.device.smMax} {
+  @media ${(props) => props.theme.device.smMax} {
     .slick-dots-right {
       li {
         margin: 5px 2px !important;
@@ -134,7 +160,7 @@ const CarouselContent = styled.div``;
 
 const CarouselContentItem = styled.div`
   height: 600px;
-  @media ${props => props.theme.device.smMax} {
+  @media ${(props) => props.theme.device.smMax} {
     height: 300px;
   }
 `;
@@ -173,8 +199,7 @@ const CarouselContentItemDes = styled.div`
     color: ${(props: SafeAny) => props.theme.colors.white};
   }
 
-  
-  @media ${props => props.theme.device.smMax} {
+  @media ${(props) => props.theme.device.smMax} {
     padding: 30px 0 30px 20px;
 
     h2 {
@@ -186,10 +211,12 @@ const CarouselContentItemDes = styled.div`
 
 const CarouselContentItemBtn = styled.div`
   margin: 30px 0;
+  cursor: pointer;
 
-  @media ${props => props.theme.device.smMax} {
-     margin: 15px 0;
+  @media ${(props) => props.theme.device.smMax} {
+    margin: 15px 0;
   }
+
 `;
 
 const CarouselContentItemData = styled.div`
@@ -224,7 +251,7 @@ const DataItem = styled.div`
     opacity: 0.7;
   }
 
-  @media ${props => props.theme.device.smMax} {
+  @media ${(props) => props.theme.device.smMax} {
     margin-left: 10px;
 
     h4 {

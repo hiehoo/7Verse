@@ -45,7 +45,12 @@ const Header = () => {
         isBtn: false,
       },
       {
-        label: "Connect Walltet",
+        label: "WHITEPAPER",
+        url: "https://docs.7verse.football/",
+        isBtn: false,
+      },
+      {
+        label: "Connect Wallet",
         url: "/",
         isBtn: true,
       },

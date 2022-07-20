@@ -18,17 +18,17 @@ const HomePage = ({ newsData }) => {
   return (
     <>
       <Head>
-        <title>Quay the Online</title>
-        <meta property="og:title" key="og_title" content={`Quầy thẻ online`} />
+        <title>7Verse Football</title>
+        <meta property="og:title" key="og_title" content={`7Verse Football`} />
         <meta
           property="og:description"
           key="og_description"
-          content={`Quầy thẻ online`}
+          content={`7Verse Football`}
         />
         <meta
           property="description"
           key="description"
-          content={`Quầy thẻ online`}
+          content={`7Verse Football`}
         />
       </Head>
       <MainLayout>

@@ -5,9 +5,20 @@ import { SafeAny } from "../../core/models/common";
 import Carousel from "antd/lib/carousel";
 
 import { useDateCountDown } from "@core/hooks/useDateCountDown";
+import ModalComponent from "@components/shared/Modal";
 
 const BotHomeCarousel = ({}) => {
   const [days, hours, minutes, seconds] = useDateCountDown(new Date('08/22/2022'));
+  const [isShow, setIsShow] = useState(false);
+
+  const onShowModalHandler = () => {
+    console.log(1);
+    setIsShow(true);
+  };
+
+  const onCloseModalHandler = () => {
+    setIsShow(false);
+  }
 
   return (
     <BotHomeCarouselWrap>
@@ -17,7 +28,7 @@ const BotHomeCarousel = ({}) => {
           <CarouselContentItem>
             <CarouselContentItemWrap>
               <CarouselContentItemImg>
-                <img src="/images/common/main-messi.png" />
+                <img src="/images/common/Mainmessi.png" />
               </CarouselContentItemImg>
               <CarouselContentItemDes>
                 <h2>Lionel messi’s NFT Card bundles</h2>
@@ -39,13 +50,21 @@ const BotHomeCarousel = ({}) => {
                   </DataItem>
                 </CarouselContentItemData>
                 <CarouselContentItemBid>
-                  <div>
+                  <div 
+                    onClick={() => {
+                      onShowModalHandler();
+                    }}
+                  >
                     <img
                       style={{ marginRight: "25px" }}
                       src="/images/common/btn-place-bid.png"
                     />
                   </div>
-                  <div>
+                  <div 
+                    onClick={() => {
+                      onShowModalHandler();
+                    }}
+                  >
                     <img src="/images/common/ico-bid.svg" />
                   </div>
                 </CarouselContentItemBid>
@@ -56,7 +75,7 @@ const BotHomeCarousel = ({}) => {
           <CarouselContentItem>
             <CarouselContentItemWrap>
               <CarouselContentItemImg>
-                <img src="/images/common/main-messi.png" />
+                <img src="/images/common/Mainmessi.png" />
               </CarouselContentItemImg>
               <CarouselContentItemDes>
                 <h2>Lionel messi’s NFT Card bundles</h2>
@@ -93,6 +112,7 @@ const BotHomeCarousel = ({}) => {
           </CarouselContentItem>
         </Carousel>
       </CarouselContent>
+      {isShow &&  <ModalComponent title="" modalShow={isShow} onCloseModalHandler={onCloseModalHandler}/> }
     </BotHomeCarouselWrap>
   );
 };

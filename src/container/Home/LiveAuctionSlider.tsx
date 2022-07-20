@@ -12,7 +12,7 @@ const LiveAuctionSlider = ({}) => {
     className: "center",
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
@@ -51,7 +51,7 @@ const LiveAuctionSlider = ({}) => {
       <Slider {...settings}>
         <LiveAuctionItem>
           <LiveAuctionItemWrap className="slick-wrapper">
-            <img src="/images/common/haaland.png" />
+            <img src="/images/common/messi.png" />
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
@@ -67,7 +67,7 @@ const LiveAuctionSlider = ({}) => {
         </LiveAuctionItem>
         <LiveAuctionItem>
           <LiveAuctionItemWrap className="slick-wrapper">
-            <img src="/images/common/griezmann.png" />
+            <img src="/images/common/griezman.png" />
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
@@ -83,7 +83,7 @@ const LiveAuctionSlider = ({}) => {
         </LiveAuctionItem>
         <LiveAuctionItem className="slick-wrapper">
           <LiveAuctionItemWrap>
-            <img src="/images/common/griezmann.png" />
+            <img src="/images/common/neymar.png" />
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
@@ -99,7 +99,23 @@ const LiveAuctionSlider = ({}) => {
         </LiveAuctionItem>
         <LiveAuctionItem className="slick-wrapper">
           <LiveAuctionItemWrap>
-            <img src="/images/common/griezmann.png" />
+            <img src="/images/common/mpappe.png" />
+            <ItemInfo>
+              <CurrentBid>
+                <span>Current Bid</span>
+                <p>0.34 BNB</p>
+              </CurrentBid>
+              <DateTime>
+                <span>Ends In</span>
+                <p>{days}:{hours}:{minutes}:{seconds}</p>
+              </DateTime>
+            </ItemInfo>
+            <button>Bid Now</button>
+          </LiveAuctionItemWrap>
+        </LiveAuctionItem>
+        <LiveAuctionItem className="slick-wrapper">
+          <LiveAuctionItemWrap>
+            <img src="/images/common/ronaldo-black.png" />
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>

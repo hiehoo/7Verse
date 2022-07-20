@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Cairo';
+    src: url('./fonts/Cairo-Black.ttf') format('woff2'), url('./fonts/Cairo-ExtraBold.ttf') format('woff');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}

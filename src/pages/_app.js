@@ -20,7 +20,7 @@ function CustomApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta property="og:title" key="og_title" content="Quầy thẻ online" />
+        <meta property="og:title" key="og_title" content="7Verse Football" />
         <meta property="og:type" key="og_type" content="website" />
         {/* <meta
           property="og:image"
@@ -30,14 +30,14 @@ function CustomApp({ Component, pageProps }) {
         <meta
           property="og:description"
           key="og_description"
-          content="Nạp thẻ, gạch thẻ và đổi thẻ dễ dàng, đa dạng hình thức thanh toán lựa chọn, nhiều ưu đãi người dùng"
+          content="A first world web3 NFT-based games for football fan"
         />
 
-        <meta name="author" key="author" content="QuayTheOnline" />
+        <meta name="author" key="author" content="7Verse Football" />
         <meta
           name="description"
           key="description"
-          content="Nạp thẻ, gạch thẻ và đổi thẻ dễ dàng, đa dạng hình thức thanh toán lựa chọn, nhiều ưu đãi người dùng"
+          content="A first world web3 NFT-based games for football fan"
         />
         {/* <meta
           name="image"

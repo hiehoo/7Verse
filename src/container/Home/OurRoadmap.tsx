@@ -6,7 +6,7 @@ import { SafeAny } from "../../core/models/common";
 const OurRoadmap = ({}) => {
   return (
     <OurRoadmapWrap>
-      <h4>OUR PARTNERS</h4>
+      <h4>PROJECT ROADMAP</h4>
       <div className="row">
         <div className="col-md-3">
           <OurRoadmapTime>
