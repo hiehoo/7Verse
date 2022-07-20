@@ -155,11 +155,10 @@ const LiveAuctionSliderWrap = styled.div`
     }
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     margin-bottom: 20px;
     font-size: 22px;
   }
-
 `;
 
 const LiveAuctionItem = styled.div`
@@ -195,7 +194,7 @@ const LiveAuctionItemWrap = styled.div`
     height: 35px;
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     img {
       width: 100%;
       height: 260px;
@@ -241,3 +240,4 @@ const DateTime = styled(CurrentBid)`
 const NextSlideArrow = styled.div``;
 
 const PreviousSlideArrow = styled.div``;
+

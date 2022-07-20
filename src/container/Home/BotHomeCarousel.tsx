@@ -148,7 +148,7 @@ const BotHomeCarouselWrap = styled.div`
     }
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     margin: 20px 0;
 
     .ant-carousel .slick-dots {
@@ -170,7 +170,7 @@ const CarouselContent = styled.div``;
 const CarouselContentItem = styled.div`
   height: 500px;
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     height: 400px;
   }
 `;
@@ -192,7 +192,7 @@ const CarouselContentItemImg = styled.div`
     max-height: 100%;
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     background-size: contain;
     display: flex;
     align-items: center;
@@ -221,7 +221,7 @@ const CarouselContentItemDes = styled.div`
     color: ${(props: SafeAny) => props.theme.colors.white};
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     padding: 0px 0 0px 20px;
 
     h2 {
@@ -242,7 +242,7 @@ const CarouselContentItemBtn = styled.div`
   line-height: 59px;
   text-transform: uppercase;
   opacity: 0.8;
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     margin: 15px 0;
   }
 `;
@@ -272,7 +272,7 @@ const DataItem = styled.div`
     }
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     p {
       font-size: 14px;
       line-height: initial;
@@ -291,7 +291,7 @@ const CarouselContentItemBid = styled.div`
     cursor: pointer;
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     div {
       &:first-child {
         margin-right: 10px;

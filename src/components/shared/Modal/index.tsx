@@ -16,7 +16,7 @@ const ModalComponent = ({ title = "", modalShow, onCloseModalHandler }) => {
         centered
         visible={modalShow}
         onOk={() => onOkHandler()}
-        onCancel={() => onOkHandler(false)}
+        onCancel={() => onOkHandler()}
       >
         <ModalContentWrap>
           <CheckCircleOutlined 

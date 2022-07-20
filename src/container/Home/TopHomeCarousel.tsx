@@ -143,7 +143,7 @@ const TopHomeCarouselWrap = styled.div`
     }
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     .slick-dots-right {
       li {
         margin: 5px 2px !important;
@@ -160,7 +160,7 @@ const CarouselContent = styled.div``;
 
 const CarouselContentItem = styled.div`
   height: 600px;
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     height: 300px;
   }
 `;
@@ -199,7 +199,7 @@ const CarouselContentItemDes = styled.div`
     color: ${(props: SafeAny) => props.theme.colors.white};
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     padding: 30px 0 30px 20px;
 
     h2 {
@@ -213,10 +213,9 @@ const CarouselContentItemBtn = styled.div`
   margin: 30px 0;
   cursor: pointer;
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     margin: 15px 0;
   }
-
 `;
 
 const CarouselContentItemData = styled.div`
@@ -233,7 +232,7 @@ const DataItem = styled.div`
   h4 {
     opacity: 0.7;
     font-size: 45px;
-    font-family: "Alegreya Sans";
+    // font-family: "Alegreya Sans";
     font-style: normal;
     font-weight: 700;
     line-height: 58px;
@@ -251,7 +250,7 @@ const DataItem = styled.div`
     opacity: 0.7;
   }
 
-  @media ${(props) => props.theme.device.smMax} {
+    @media ${(props: any) => props.theme.device.smMax} {
     margin-left: 10px;
 
     h4 {
