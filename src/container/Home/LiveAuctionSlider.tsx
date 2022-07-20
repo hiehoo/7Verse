@@ -55,7 +55,7 @@ const LiveAuctionSlider = ({}) => {
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
-                <p>0.34 BNB</p>
+                <p>15.34 BNB</p>
               </CurrentBid>
               <DateTime>
                 <span>Ends In</span>
@@ -71,7 +71,7 @@ const LiveAuctionSlider = ({}) => {
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
-                <p>0.34 BNB</p>
+                <p>6.34 BNB</p>
               </CurrentBid>
               <DateTime>
                 <span>Ends In</span>
@@ -87,7 +87,7 @@ const LiveAuctionSlider = ({}) => {
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
-                <p>0.34 BNB</p>
+                <p>23.34 BNB</p>
               </CurrentBid>
               <DateTime>
                 <span>Ends In</span>
@@ -103,7 +103,7 @@ const LiveAuctionSlider = ({}) => {
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
-                <p>0.34 BNB</p>
+                <p>6.34 BNB</p>
               </CurrentBid>
               <DateTime>
                 <span>Ends In</span>
@@ -119,7 +119,7 @@ const LiveAuctionSlider = ({}) => {
             <ItemInfo>
               <CurrentBid>
                 <span>Current Bid</span>
-                <p>0.34 BNB</p>
+                <p>15.34 BNB</p>
               </CurrentBid>
               <DateTime>
                 <span>Ends In</span>
