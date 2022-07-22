@@ -140,6 +140,26 @@ li {
     text-align: center;
 }
 
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    opacity: 0.3;
+    background: #f94a4a !important;
+}
+
+.slick-dots button::before {
+    display: none;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
 @media (max-width: 576px) {
     .ant-picker-panel-container .ant-picker-panels {
         display: flex;

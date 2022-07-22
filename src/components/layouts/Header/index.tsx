@@ -67,7 +67,7 @@ const Header = () => {
       <HeaderWrapper>
         <div className="container">
           <HeaderWrapperMobi>
-            <LogoWrapMobi>
+            <LogoWrapMobi onClick={() => router.push('/')}>
               <Image src={icoLogo} alt="" />
             </LogoWrapMobi>
             <IconShowDrawer>
@@ -154,6 +154,7 @@ const HeaderWrap = styled.div`
 
 const LogoWrap = styled.div`
   width: 30%;
+  cursor: pointer;
   img {
     width: 150px;
     height: auto;
