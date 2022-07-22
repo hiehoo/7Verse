@@ -196,6 +196,9 @@ const ImgWc = styled.div`
   img {
     width: 300px;
   }
+  @media ${(props: any) => props.theme.device.smMax} {
+    display: none;
+  }
 `;
 
 const CarouselContentItemDes = styled.div`
