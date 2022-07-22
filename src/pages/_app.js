@@ -22,11 +22,6 @@ function CustomApp({ Component, pageProps }) {
       <Head>
         <meta property="og:title" key="og_title" content="7Verse Football" />
         <meta property="og:type" key="og_type" content="website" />
-        {/* <meta
-          property="og:image"
-          key="og_image"
-          content="http://funtap.vn/uncommon/funtap/images/funtap.jpg"
-        /> */}
         <meta
           property="og:description"
           key="og_description"
@@ -39,11 +34,6 @@ function CustomApp({ Component, pageProps }) {
           key="description"
           content="A first world web3 NFT-based games for football fan"
         />
-        {/* <meta
-          name="image"
-          key="image"
-          content="http://funtap.vn/uncommon/funtap/images/funtap.jpg"
-        /> */}
       </Head>
       <div className="app">
         <main>

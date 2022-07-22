@@ -10,19 +10,18 @@ const TopHomeCarousel = ({}) => {
   const [isShow, setIsShow] = useState(false);
 
   const onShowModalHandler = () => {
-    console.log(1);
     setIsShow(true);
   };
 
   const onCloseModalHandler = () => {
     setIsShow(false);
-  }
+  };
 
   return (
     <TopHomeCarouselWrap>
       <CarouselContent>
         {/* atoplay */}
-        <Carousel dotPosition={`right`}>
+        <Carousel dotPosition={`right`} autoplay>
           <CarouselContentItem>
             <CarouselContentItemWrap>
               <CarouselContentItemImg>
@@ -69,23 +68,25 @@ const TopHomeCarousel = ({}) => {
               <CarouselContentItemImg>
                 <img src="/images/common/footballteam.png" />
               </CarouselContentItemImg>
-              <CarouselContentItemDes>
+              <CarouselContentItemDes style={{paddingTop: '20px'}}>
                 <h2>
-                Buy 7VR to earn more 7VR by building your Squad with NFT Cards and win the 7Verse Fantasy League.  
+                  Buy 7VR to earn more 7VR by building your Squad with NFT Cards
+                  and win the 7Verse Fantasy League.
                 </h2>
                 <CarouselContentItemBtn
                   onClick={() => {
                     onShowModalHandler();
                   }}
                 >
-                  <Row>
-                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-                      <Button type="primary" shape="round"> Audited by Cyberscope.io</Button> 
-                    </Col>              
-                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-                      <Button type="primary" shape="round"> Purchase 7VR Token Presale Now!</Button> 
-                    </Col>
-                  </Row>
+                  <Button className="btn-ln" type="primary" shape="round">
+                    {" "}
+                    Audited by Cyberscope.io
+                  </Button>
+
+                  <Button className="btn-ln" type="primary" shape="round">
+                    {" "}
+                    Purchase 7VR Now!
+                  </Button>
                 </CarouselContentItemBtn>
 
                 <CarouselContentItemData>
@@ -109,8 +110,13 @@ const TopHomeCarousel = ({}) => {
           </CarouselContentItem>
         </Carousel>
       </CarouselContent>
-      {isShow &&  <ModalComponent title="" modalShow={isShow} onCloseModalHandler={onCloseModalHandler}/> }
-     
+      {isShow && (
+        <ModalComponent
+          title=""
+          modalShow={isShow}
+          onCloseModalHandler={onCloseModalHandler}
+        />
+      )}
     </TopHomeCarouselWrap>
   );
 };
@@ -128,6 +134,10 @@ const TopHomeCarouselWrap = styled.div`
         width: 10px !important;
         height: 10px !important;
         border-radius: 50%;
+
+        &:before {
+          opacity: 0 !important;
+        }
       }
     }
     .slick-active {
@@ -143,7 +153,7 @@ const TopHomeCarouselWrap = styled.div`
     }
   }
 
-    @media ${(props: any) => props.theme.device.smMax} {
+  @media ${(props: any) => props.theme.device.smMax} {
     .slick-dots-right {
       li {
         margin: 5px 2px !important;
@@ -160,7 +170,7 @@ const CarouselContent = styled.div``;
 
 const CarouselContentItem = styled.div`
   height: 600px;
-    @media ${(props: any) => props.theme.device.smMax} {
+  @media ${(props: any) => props.theme.device.smMax} {
     height: 300px;
   }
 `;
@@ -199,12 +209,17 @@ const CarouselContentItemDes = styled.div`
     color: ${(props: SafeAny) => props.theme.colors.white};
   }
 
-    @media ${(props: any) => props.theme.device.smMax} {
-    padding: 30px 0 30px 20px;
+  .btn-ln {
+    background: linear-gradient(90deg, #1c199e 0%, #9f5e5e 100%);
+    border: none;
+  }
+
+  @media ${(props: any) => props.theme.device.smMax} {
+    padding: 20px 0 100px 20px;
 
     h2 {
-      font-size: 17px;
-      line-height: 27px;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 `;
@@ -213,8 +228,20 @@ const CarouselContentItemBtn = styled.div`
   margin: 30px 0;
   cursor: pointer;
 
-    @media ${(props: any) => props.theme.device.smMax} {
+  button {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+  @media ${(props: any) => props.theme.device.smMax} {
     margin: 15px 0;
+
+    button {
+      font-size: 11px;
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
   }
 `;
 
@@ -250,7 +277,7 @@ const DataItem = styled.div`
     opacity: 0.7;
   }
 
-    @media ${(props: any) => props.theme.device.smMax} {
+  @media ${(props: any) => props.theme.device.smMax} {
     margin-left: 10px;
 
     h4 {
@@ -260,7 +287,7 @@ const DataItem = styled.div`
 
     p {
       font-size: 11px;
-      line-height: 22px;
+      line-height: 15px;
     }
   }
 `;
