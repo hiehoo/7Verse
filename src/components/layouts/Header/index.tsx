@@ -6,6 +6,7 @@ import React, {
   useState,
 } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import styled from "@emotion/styled";
 import Image from "next/image";
@@ -33,26 +34,31 @@ const Header = () => {
         label: "NFT Marketplace",
         url: "/",
         isBtn: false,
+        isNewTab: false,
       },
       {
         label: "SQUAD BUILDER",
         url: "/",
         isBtn: false,
+        isNewTab: false,
       },
       {
         label: "BET N EARN",
         url: "/",
         isBtn: false,
+        isNewTab: false,
       },
       {
         label: "WHITEPAPER",
         url: "https://docs.7verse.football/",
         isBtn: false,
+        isNewTab: true,
       },
       {
         label: "Connect Wallet",
         url: "/",
         isBtn: true,
+        isNewTab: false,
       },
     ];
     return menuList;
@@ -67,7 +73,7 @@ const Header = () => {
       <HeaderWrapper>
         <div className="container">
           <HeaderWrapperMobi>
-            <LogoWrapMobi onClick={() => router.push('/')}>
+            <LogoWrapMobi onClick={() => router.push("/")}>
               <Image src={icoLogo} alt="" />
             </LogoWrapMobi>
             <IconShowDrawer>
@@ -92,13 +98,21 @@ const Header = () => {
             {menuItems.map((item, index) => {
               return (
                 <MenuItemMobiWrap key={index} isBtn={item.isBtn}>
-                  <span
-                    onClick={() =>
-                      router.push(item.url, null, { shallow: true })
-                    }
-                  >
-                    {item.label}
-                  </span>
+                  {item.isNewTab ? (
+                    <Link href={item.url} passHref>
+                      <a target="_blank" rel="noopener noreferrer">
+                        {item.label}
+                      </a>
+                    </Link>
+                  ) : (
+                    <span
+                      onClick={() =>
+                        router.push(item.url, null, { shallow: true })
+                      }
+                    >
+                      {item.label}
+                    </span>
+                  )}
                 </MenuItemMobiWrap>
               );
             })}
@@ -119,13 +133,21 @@ const Header = () => {
             {menuItems.map((item, index) => {
               return (
                 <MenuItemWrap key={index} isBtn={item.isBtn}>
-                  <span
-                    onClick={() =>
-                      router.push(item.url, null, { shallow: true })
-                    }
-                  >
-                    {item.label}
-                  </span>
+                  {item.isNewTab ? (
+                    <Link href={item.url} passHref>
+                      <a target="_blank" rel="noopener noreferrer">
+                        {item.label}
+                      </a>
+                    </Link>
+                  ) : (
+                    <span
+                      onClick={() =>
+                        router.push(item.url, null, { shallow: true })
+                      }
+                    >
+                      {item.label}
+                    </span>
+                  )}
                 </MenuItemWrap>
               );
             })}
@@ -173,6 +195,7 @@ const MenuItemWrap = styled.div`
   &:last-child {
     margin-right: 0;
   }
+  a,
   span {
     text-transform: uppercase;
     cursor: pointer;
