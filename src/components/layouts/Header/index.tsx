@@ -236,7 +236,7 @@ const IconShowDrawer = styled.div`
 const MenuItemMobiWrap = styled(MenuItemWrap)`
   margin-right: 0px;
   padding: 8px;
-  span {
+  a, span {
     font-size: 15px;
     color: ${(props: SafeAny) => props.theme.colors.darkBg};
   }
