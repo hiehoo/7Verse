@@ -12,7 +12,6 @@ const BotHomeCarousel = ({}) => {
   const [isShow, setIsShow] = useState(false);
 
   const onShowModalHandler = () => {
-    console.log(1);
     setIsShow(true);
   };
 

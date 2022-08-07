@@ -32,7 +32,7 @@ const Header = () => {
     let menuList = [
       {
         label: "NFT Marketplace",
-        url: "/",
+        url: "/marketplace",
         isBtn: false,
         isNewTab: false,
       },
