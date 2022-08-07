@@ -12,13 +12,13 @@ const MarketPlayListComponent = ({ playerList = [] }: SafeAny) => {
       <MarketPlayListContentWrap>
         <MarketTitleSort>
           <p>PLayer List</p>
-          <SortData>
+          {/* <SortData>
             <p>Sort by</p>
             <Select defaultValue="1" style={{ width: 120 }}>
               <Option value="1">Last Listed</Option>
               <Option value="0">First Listed</Option>
             </Select>
-          </SortData>
+          </SortData> */}
         </MarketTitleSort>
         <TotalItemFilter>{playerList?.length} results</TotalItemFilter>
         <MarketPlayListItem>
