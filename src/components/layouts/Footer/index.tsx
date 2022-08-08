@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 import styled from "@emotion/styled";
 import Image from "next/image";
@@ -10,13 +11,14 @@ import icoTwiter from "public/images/social/icon-twiter.svg";
 import { SafeAny } from "@core/models/common";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <FooterWrapper>
       <div className="container py-5">
         <div className="row">
           <div className="col-md-4">
             <LogoWrapper>
-              <ImageLogo src="/images/common/main-logo.png" />
+              <ImageLogo onClick={() => router.push('/')} src="/images/common/main-logo.png" />
               <p>
                 The worlds largest digital marketpalce <br /> for crypto
                 collectibities and non-fungible <br /> tokens(NFTs) Buy, Sell
@@ -44,7 +46,9 @@ const Footer = () => {
                 <FooterMenuWrap>
                   <ul>
                     <li>Explore</li>
-                    <li>
+                    <li onClick={() =>
+                        router.push('/marketplace')
+                      }>
                       <a>NFT Marketplace</a>
                     </li>
                     <li>

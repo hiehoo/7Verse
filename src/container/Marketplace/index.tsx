@@ -94,7 +94,7 @@ const MarketplaceContainer = () => {
                 <MarketPlayListComponent playerList={playerList} />
               ) : (
                 <EmptyData>
-                  <p>Không tìm thấy vật phẩm nào!</p>
+                  <p>No items found!</p>
                 </EmptyData>
               )}
             </MarketplaceBlock>
