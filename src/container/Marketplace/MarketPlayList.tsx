@@ -4,9 +4,19 @@ import styled from "@emotion/styled";
 import Select from "antd/lib/select";
 import { SafeAny } from "@core/models/common";
 import map from "lodash/map";
+import ModalComponent from "@components/shared/Modal";
 
 const MarketPlayListComponent = ({ playerList = [] }: SafeAny) => {
   const { Option } = Select;
+  const [isShow, setIsShow] = useState(false);
+
+  const onCommingSoonShow = () => {
+    setIsShow(true);
+  };
+
+  const onCloseModalHandler = () => {
+    setIsShow(false);
+  };
   return (
     <MarketPlayListWrapper>
       <MarketPlayListContentWrap>
@@ -40,12 +50,24 @@ const MarketPlayListComponent = ({ playerList = [] }: SafeAny) => {
                     </ItemInfo>
                     <div>
                       <BtnBidNow>
-                        <button className="btn">BID NOW</button>
+                        <button
+                          className="btn"
+                          onClick={() => onCommingSoonShow()}
+                        >
+                          BID NOW
+                        </button>
                       </BtnBidNow>
                     </div>
                   </MarketPlayListItemContent>
                 </MarketPlayListItemCol>
               ))}
+              {isShow && (
+                <ModalComponent
+                  title=""
+                  modalShow={isShow}
+                  onCloseModalHandler={onCloseModalHandler}
+                />
+              )}
             </MarketPlayListItemRow>
           </MarketPlayListItemWrap>
         </MarketPlayListItem>
