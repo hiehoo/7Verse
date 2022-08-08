@@ -127,7 +127,7 @@ const Header = () => {
       <div className="container">
         <HeaderWrap>
           <LogoWrap>
-            <Image src={icoMainLogo} alt="" />
+            <Image src={icoMainLogo} alt="" onClick={() => router.push("/")}/>
           </LogoWrap>
           <MenuWrap>
             {menuItems.map((item, index) => {
