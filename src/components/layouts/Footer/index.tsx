@@ -52,13 +52,13 @@ const Footer = () => {
                       <a>NFT Marketplace</a>
                     </li>
                     <li>
-                      <a>Bet N Earn</a>
+                      <a href="/#roadmap">Roadmap</a>
                     </li>
                     <li>
-                      <a>NFT Squad Builder</a>
+                      <a href="/#liveauction">Live Auction</a>
                     </li>
                     <li>
-                      <a> 7Verse Fantasy League</a>
+                      <a>7Verse Fantasy League</a>
                     </li>
                   </ul>
                 </FooterMenuWrap>
@@ -91,9 +91,6 @@ const Footer = () => {
                     </li>
                     <li>
                       <a>Careers</a>
-                    </li>
-                    <li>
-                      <a>Rankings</a>
                     </li>
                     <li>
                       <a>Rankings</a>
