@@ -37,14 +37,14 @@ const Header = () => {
         isNewTab: false,
       },
       {
-        label: "SQUAD BUILDER",
-        url: "/",
+        label: "LIVE AUCTION",
+        url: "/#liveauction",
         isBtn: false,
         isNewTab: false,
       },
       {
-        label: "BET N EARN",
-        url: "/",
+        label: "ROADMAP",
+        url: "/#roadmap",
         isBtn: false,
         isNewTab: false,
       },

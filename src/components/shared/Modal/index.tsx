@@ -15,6 +15,7 @@ const ModalComponent = ({ title = "", modalShow, onCloseModalHandler }) => {
         title={title}
         centered
         visible={modalShow}
+        footer={null}
         onOk={() => onOkHandler()}
         onCancel={() => onOkHandler()}
       >

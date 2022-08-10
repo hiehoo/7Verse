@@ -5,7 +5,7 @@ import { SafeAny } from "../../core/models/common";
 
 const OurRoadmap = ({}) => {
   return (
-    <OurRoadmapWrap>
+    <OurRoadmapWrap id="roadmap">
       <h4>PROJECT ROADMAP</h4>
       <div className="row">
         <div className="col-md-3">
