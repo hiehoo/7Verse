@@ -46,7 +46,7 @@ const LiveAuctionSlider = ({}) => {
   };
 
   return (
-    <LiveAuctionSliderWrap>
+    <LiveAuctionSliderWrap id="liveauction">
       <h4>Live Auction</h4>
       <Slider {...settings}>
         <LiveAuctionItem>
