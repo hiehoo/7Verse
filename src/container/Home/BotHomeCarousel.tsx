@@ -8,7 +8,7 @@ import { useDateCountDown } from "@core/hooks/useDateCountDown";
 import ModalComponent from "@components/shared/Modal";
 
 const BotHomeCarousel = ({}) => {
-  const [days, hours, minutes, seconds] = useDateCountDown(new Date('08/20/2022-09:30:00'));
+  const [days, hours, minutes, seconds] = useDateCountDown(new Date('08/20/2022/09:30:00'));
   const [isShow, setIsShow] = useState(false);
 
   const onShowModalHandler = () => {
