@@ -106,7 +106,7 @@ export const saleType = [
 
 export const playerListItems = [
   {
-    playerName: "Haaland",
+    playerName: "Erling Haaland",
     scarity: scarityVal.limited,
     position: positionVal.attackingMidfielder,
     saleType: saleTypeVal.cards,
@@ -115,7 +115,7 @@ export const playerListItems = [
     stats: 86,
   },
   {
-    playerName: "Messi",
+    playerName: "Lionel Messi",
     scarity: scarityVal.unique,
     position: positionVal.centreForward,
     saleType: saleTypeVal.cards,
@@ -124,7 +124,7 @@ export const playerListItems = [
     stats: 90,
   },
   {
-    playerName: "Mbappe",
+    playerName: "Kylian Mbappe",
     scarity: scarityVal.rare,
     position: positionVal.attackingMidfielder,
     saleType: saleTypeVal.cards,
@@ -133,7 +133,7 @@ export const playerListItems = [
     stats: 90,
   },
   {
-    playerName: "Kimmich",
+    playerName: "Joshua Kimmich",
     scarity: scarityVal.limited,
     position: positionVal.attackingMidfielder,
     saleType: saleTypeVal.bundles,
@@ -142,7 +142,7 @@ export const playerListItems = [
     stats: 85,
   },
   {
-    playerName: "Pogba",
+    playerName: "Paul Pogba",
     scarity: scarityVal.limited,
     position: positionVal.centreMidfielder,
     saleType: saleTypeVal.cards,
@@ -151,7 +151,7 @@ export const playerListItems = [
     stats: 88,
   },
   {
-    playerName: "Ronaldo",
+    playerName: "Cristiano Ronaldo",
     scarity: scarityVal.unique,
     position: positionVal.centreBack,
     saleType: saleTypeVal.cards,
@@ -178,7 +178,7 @@ export const playerListItems = [
     stats: 92,
   },
   {
-    playerName: "Lewan",
+    playerName: "Robert Lewan",
     scarity: scarityVal.superRare,
     position: positionVal.attackingMidfielder,
     saleType: saleTypeVal.cards,
@@ -187,7 +187,7 @@ export const playerListItems = [
     stats: 90,
   },
   {
-    playerName: "Nkunku",
+    playerName: "Christopher Nkunku",
     scarity: scarityVal.rare,
     position: positionVal.centreForward,
     saleType: saleTypeVal.bundles,
@@ -196,7 +196,7 @@ export const playerListItems = [
     stats: 84,
   },
   {
-    playerName: "Neuer",
+    playerName: "Manuel Neuer",
     scarity: scarityVal.limited,
     position: positionVal.goalKeeper,
     saleType: saleTypeVal.bundles,
@@ -205,7 +205,7 @@ export const playerListItems = [
     stats: 91,
   },
   {
-    playerName: "Benzema",
+    playerName: "Karim Benzema",
     scarity: scarityVal.superRare,
     position: positionVal.attackingMidfielder,
     saleType: saleTypeVal.cards,
@@ -214,7 +214,7 @@ export const playerListItems = [
     stats: 90,
   },
   {
-    playerName: "Muller",
+    playerName: "Thomas Muller",
     scarity: scarityVal.superRare,
     position: positionVal.attackingMidfielder,
     saleType: saleTypeVal.cards,
